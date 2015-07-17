@@ -82,7 +82,7 @@ Template.postSubmit.events({
           if (err){
             swal({
               title: 'Sorry.',
-              text: 'Something went wrong while uploading the file.',
+              text: 'Something went wrong while uploading the file.\n\nPlease make sure you are uploading an image file (.jpg or .jpeg) smaller than 2MB.',
               type: 'error'
             });
              // handle error
