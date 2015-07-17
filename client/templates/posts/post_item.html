@@ -1,8 +1,38 @@
 <template name="postItem">
   <div class="post">
-    <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+    <a href="#" class="upvote btn btn-default {{upvotedClass}}">+ {{votes}}</a>
+    <div class='media'>
+    <div class='media-left'>
+      <a href="{{pathFor 'postPage'}}">
+        <img class="media-object" src="{{image}}" height="150em" width="125em">
+      </a>
+    </div>
+  <div class='media-body'>
     <div class="post-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+      <div class='list-group'>
+        <p class='list-group-item active'>
+          <h4 class='list-group-item-heading'><a class='post-item-title' href="{{pathFor 'postPage'}}">{{title}}</a></h4>
+        </p>
+        <p class='list-group-item'>
+          <h4 class='list-group-item-heading'>Description</h4>
+          <p class='list-group-item-text'>{{description}}</p>
+        </p>
+        <p class='list-group-item'>
+          <h4 class='list-group-item-heading'>Additional Details</h4>
+          <p class='list-group-item-text'>
+            <p><strong>Location:</strong> {{location}}</p>
+            <p><strong>Lost on:</strong> {{time}}</p>
+            <p><strong>Owner Info:</strong></p>
+            <div class='panel panel-default'>
+              <div class='panel-body'>
+                {{#each tags}}
+                  <a href="{{pathFor 'tag' tagged=this postsLimit=5}}" class='label-button'>{{this}}</a>
+                {{/each}}
+              </div>
+            </div>
+          </p>
+        </p>
+      </div>
       <p>
         {{pluralize votes "Vote"}},
         submitted by {{author}},
@@ -10,6 +40,8 @@
         {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
       </p>
     </div>
+  </div>
+</div>
     <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
   </div>
 </template>

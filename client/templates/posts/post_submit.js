@@ -53,24 +53,16 @@ Template.postSubmit.events({
       image: photoURL,
       tags: data
     };
+
+    // check for errors in the post attributes
     var errors = validatePost(post);
     if (errors.title || errors.description || errors.location || errors.time || errors.tags)
       return Session.set('postSubmitErrors', errors);
-    swal({
-      title: 'Success',
-      text: 'The post did not contain any errors',
-      imageUrl: post.image
-    });
-    console.log(post);
-    return;
+
     Meteor.call('postInsert', post, function(error, result) {
       // display the error to the user and abort
       if (error)
         return throwError(error.reason);
-
-      // show this result but route anyway
-      if (result.postExists)
-        throwError('This link has already been posted');
 
       Router.go('postPage', {_id: result._id});
     });
