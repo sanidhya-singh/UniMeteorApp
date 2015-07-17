@@ -1,3 +1,88 @@
+/* custom css */
+
+.load-more {
+  border: 2px solid #c9302c;
+  display: block;
+  border-radius: 60px;
+  text-align: center;
+  height: 120px;
+  line-height: 120px;
+  margin-bottom: 10px;
+  color:#c9302c;
+  width: 120px;
+  font-size:12px;
+  font-weight: bold;
+  margin-top: 45px;}
+
+  .load-more:hover {
+    text-decoration: none;
+    color: #a9312a;
+    border-color: #a9312a;
+  }
+
+
+.post-item-title {
+  color: white;
+}
+
+.post-item-title:hover{
+  text-decoration: none;
+}
+
+.post-item-title:visited{
+  text-decoration: none;
+}
+
+.post-item-title:active{
+  text-decoration: none;
+}
+
+.post-item-title:link{
+  text-decoration: none;
+}
+
+
+.wrap {
+
+}
+
+.label-button {
+    text-decoration: none;
+    color: black;
+    background: #ccc;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px;
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+  .label-button:hover {
+    color: white;
+    background: #c9302c;
+    text-decoration: none;
+  }
+
+  .label-button:hover{
+    text-decoration: none;
+  }
+
+  .label-button:visited{
+    text-decoration: none;
+  }
+
+  .label-button:active{
+    text-decoration: none;
+  }
+
+  .label-button:link{
+    text-decoration: none;
+  }
+
+
+/* boilerplate CSS */
+
 .grid-block, .main, .post, .comments li, .comment-form {
   background: #fff;
   border-radius: 3px;

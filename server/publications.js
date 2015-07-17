@@ -20,3 +20,16 @@ Meteor.publish('comments', function(postId) {
 Meteor.publish('notifications', function() {
   return Notifications.find({userId: this.userId, read: false});
 });
+
+Meteor.publish('taggedPosts', function(tag, options){
+  check(tag, String);
+  check(options, {
+    sort: Object,
+    limit: Number
+  });
+  return Posts.find({tags: tag}, options);
+});
+
+Meteor.publish('postTags', function() {
+  return Posts.find({}, {_id: 0, dataType: 1});
+});
