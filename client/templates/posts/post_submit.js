@@ -95,7 +95,11 @@ Template.postSubmit.events({
                timer: 3000,
                showConfirmButton: false
               });
-             Session.set('photoURL', "/cfs/files/images/" + fileObj._id);
+              var photoURL = "/cfs/files/images/" + fileObj._id;
+             Session.set('photoURL', photoURL);
+             setTimeout(function() {
+               document.getElementById('lost-item-image').src = photoURL;
+             }, 1000);
           }
         });
      });

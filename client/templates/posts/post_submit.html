@@ -1,6 +1,9 @@
 <template name="postSubmit">
   <div class='container'>
     <form class="main form page">
+    <div class='panel panel-default'>
+    <div class='panel-heading'>Details of Lost Item</div>
+    <div class='panel-body'>
     <div class="form-group {{errorClass 'title'}}">
       <label class="control-label" for="title">Title</label>
       <div class="controls">
@@ -22,7 +25,7 @@
         <div class='col-md-6'>
           <div class='row'>
             <div class='col-md-3'>
-              <img src="{{getFromSession 'photoURL'}}" height='125' width='125' style='border: 2px solid #333'/>
+              <img id='lost-item-image' src="/images/lost-static.jpg" height='125' width='125' style='border: 2px solid #333'/>
             </div>
             <div class='col-md-3'>
               <label for="file-upload-cover" class="custom-file-upload">
@@ -60,6 +63,9 @@
       </div>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary"/>
+  </div>
+  </div>
   </form>
+
 </div>
 </template>
