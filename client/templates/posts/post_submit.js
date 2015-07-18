@@ -1,6 +1,5 @@
 Template.postSubmit.onCreated(function() {
   Session.set('postSubmitErrors', {});
-  Session.set('photoURL', '/images/lost-static.jpg');
 });
 
 Template.postSubmit.onRendered(function() {
@@ -43,7 +42,7 @@ Template.postSubmit.events({
     }
 
     // fetch the uploaded image (if any)
-    var photoURL = Session.get('photoURL');
+    var photoURL = document.getElementById('lost-item-image').src;
 
     var post = {
       title: $(e.target).find('[name=title]').val().trim(),
@@ -88,10 +87,10 @@ Template.postSubmit.events({
                showConfirmButton: false
               });
               var photoURL = "/cfs/files/images/" + fileObj._id;
-             Session.set('photoURL', photoURL);
+              document.getElementById('lost-item-image').src = '/images/loader.gif'
              setTimeout(function() {
                document.getElementById('lost-item-image').src = photoURL;
-             }, 1000);
+             }, 4000);
           }
         });
      });

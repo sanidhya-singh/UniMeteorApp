@@ -1,4 +1,4 @@
-<template name="postItem">
+<template name="postPageItem">
   <div class="post">
     <a href="#" class="upvote btn btn-default {{upvotedClass}}">+ {{votes}}</a>
     <div class='media'>
@@ -16,6 +16,21 @@
         <p class='list-group-item'>
           <h4 class='list-group-item-heading'>Description</h4>
           <p class='list-group-item-text'>{{description}}</p>
+        </p>
+        <p class='list-group-item'>
+          <h4 class='list-group-item-heading'>Additional Details</h4>
+          <p class='list-group-item-text'>
+            <p><strong>Location:</strong> {{location}}</p>
+            <p><strong>Lost on:</strong> {{time}}</p>
+            <p><strong>Owner Info:</strong></p>
+            <div class='panel panel-default'>
+              <div class='panel-body'>
+                {{#each tags}}
+                  <a href="{{pathFor 'tag' tagged=this postsLimit=5}}" class='label-button'>{{this}}</a>
+                {{/each}}
+              </div>
+            </div>
+          </p>
         </p>
       </div>
       <p>
