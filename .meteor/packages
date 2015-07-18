@@ -4,7 +4,6 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-twbs:bootstrap
 underscore
 iron:router@1.0.0-rc.1
 sacha:spin
@@ -22,3 +21,5 @@ kevohagan:sweetalert
 cfs:gridfs
 pcel:loading
 multiply:iron-router-progress
+richsilv:semantic-ui-modal
+twbs:bootstrap
