@@ -1,5 +1,6 @@
 /* custom css */
 
+
 .grid-block, .main, .post, .comments li, .comment-form {
   background: #fff;
   border-radius: 3px;
@@ -210,6 +211,8 @@
   }
 
 
+
+
 /* boilerplate CSS */
 
 
@@ -263,7 +266,8 @@ body {
   .post .upvote {
     display: block;
     margin: 7px 12px 0 0;
-    float: left; }
+    float: left;
+    }
   .post .post-content {
     float: left; }
     .post .post-content h3 {
@@ -365,6 +369,26 @@ body {
   clear: both;
   margin-bottom: 5px;
   pointer-events: auto;
+}
+
+.post-link {
+  text-decoration: none;
+  font-weight:bold
+}
+.post-link:hover{
+  text-decoration: none;
+}
+
+.post-link:visited{
+  text-decoration: none;
+}
+
+.post-link:active{
+  text-decoration: none;
+}
+
+.post-link:link{
+  text-decoration: none;
 }
 
 .ms-ctn{position:relative;padding:5px 12px;height:auto}

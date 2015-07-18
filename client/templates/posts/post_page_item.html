@@ -1,47 +1,46 @@
 <template name="postPageItem">
   <div class="post">
-    <a href="#" class="upvote btn btn-default {{upvotedClass}}">+ {{votes}}</a>
     <div class='media'>
-    <div class='media-left'>
-      <a href="{{pathFor 'postPage'}}">
-        <img class="media-object" src="{{image}}" height="150em" width="125em">
-      </a>
-    </div>
-  <div class='media-body'>
-    <div class="post-content">
-      <div class='list-group'>
-        <p class='list-group-item active'>
-          <h4 class='list-group-item-heading'><a class='post-item-title' href="{{pathFor 'postPage'}}">{{title}}</a></h4>
-        </p>
+      <div class='media-left'>
+        <a href="{{pathFor 'postPage'}}">
+          <img class="media-object" src="{{image}}" height="120em" width="120em">
+        </a>
+        <div style='text-align: center'>
+          <a href="#" class="upvote btn btn-default btn-xs {{upvotedClass}}">+ {{votes}}</a>
+        </div>
+      </div>
+      <div class='media-body'>
+        <h3 class="media-heading"><a class="post-link" href="{{pathFor 'postPage'}}">{{title}}</a>  <small>owner: <strong>{{author}}</strong></small></h3>
         <p class='list-group-item'>
           <h4 class='list-group-item-heading'>Description</h4>
           <p class='list-group-item-text'>{{description}}</p>
+          <div style='margin-top: 7px'>
+            {{#each tags}}
+              <a href="{{pathFor 'tag' tagged=this postsLimit=5}}" class='label-button'>{{this}}</a>
+            {{/each}}
+          </div>
         </p>
         <p class='list-group-item'>
           <h4 class='list-group-item-heading'>Additional Details</h4>
           <p class='list-group-item-text'>
             <p><strong>Location:</strong> {{location}}</p>
             <p><strong>Lost on:</strong> {{time}}</p>
-            <p><strong>Owner Info:</strong></p>
-            <div class='panel panel-default'>
-              <div class='panel-body'>
-                {{#each tags}}
-                  <a href="{{pathFor 'tag' tagged=this postsLimit=5}}" class='label-button'>{{this}}</a>
-                {{/each}}
-              </div>
-            </div>
+            <p><strong>Owner Info:</strong> This is where we'll have Name, Phone number, Hostel, Room No. etc.</p>
           </p>
         </p>
+        <p>
+          <div class='panel panel-default'>
+            <div class='panel-body'>
+              {{pluralize votes "Vote"}},
+              <a class="post-link" href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
+              {{#if ownPost}}
+                <a href="{{pathFor 'postEdit'}}">Edit</a>
+                <a href="#" class='delete'>Delete</a>
+              {{/if}}
+            </div>
+          </div>
+        </p>
       </div>
-      <p>
-        {{pluralize votes "Vote"}},
-        submitted by {{author}},
-        <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
-        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
-      </p>
     </div>
-  </div>
-</div>
-    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
   </div>
 </template>

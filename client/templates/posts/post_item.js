@@ -34,6 +34,7 @@ Template.postItem.events({
     function(isConfirm){
       if (isConfirm) {
         Posts.remove(currentPostId);
+        Meteor.call('removeChildComments', currentPostId);
         Router.go('home');
         swal({
           title: 'Post Removed',

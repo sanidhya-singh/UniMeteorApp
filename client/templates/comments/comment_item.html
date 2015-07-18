@@ -7,7 +7,13 @@
         </a>
       </div>
       <div class="media-body">
-        <h4 class="media-heading">{{author}} <span class='date'>on {{submittedText}}</span></h4>
+        <h4 class="media-heading">{{author}}
+          <span class='date'>on {{submittedText}}</span>
+          {{#if ownComment}}
+            <span class="data"><a class="edit" href="#">Edit</a></span>
+            <a class="delete" href="#">Delete</a>
+          {{/if}}
+        </h4>
         <p>{{body}}</p>
       </div>
     </div>
