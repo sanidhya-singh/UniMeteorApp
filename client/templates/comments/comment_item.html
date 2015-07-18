@@ -1,9 +1,15 @@
 <template name="commentItem">
   <li>
-    <h4>
-      <span class="author">{{author}}</span>
-      <span class="date">on {{submittedText}}</span>
-    </h4>
-    <p>{{body}}</p>
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="/images/lost-static.jpg" height="32" width="32" alt="/images/lost-static.jpg">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{author}} <span class='date'>on {{submittedText}}</span></h4>
+        <p>{{body}}</p>
+      </div>
+    </div>
   </li>
 </template>

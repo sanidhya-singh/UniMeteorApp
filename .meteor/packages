@@ -20,3 +20,5 @@ manuelschoebel:wait-on-lib
 jquery
 kevohagan:sweetalert
 cfs:gridfs
+pcel:loading
+multiply:iron-router-progress
