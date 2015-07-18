@@ -1,5 +1,9 @@
 /* custom css */
 
+.media-body {
+  width: 100%;
+}
+
 .load-more {
   border: 2px solid #c9302c;
   display: block;
