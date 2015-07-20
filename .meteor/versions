@@ -85,7 +85,9 @@ retry@1.0.3
 richsilv:semantic-ui-modal@1.1.1
 routepolicy@1.0.5
 sacha:spin@2.0.4
+semantic:ui-card@2.0.2
 semantic:ui-css@1.9.3
+semantic:ui-icon@2.0.2
 service-configuration@1.0.4
 session@1.1.0
 sha@1.0.3

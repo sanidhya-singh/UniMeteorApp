@@ -1,80 +1,70 @@
 <template name="postSubmit">
-  <div class='container'>
-    <form class="main form page">
-    <div class='panel panel-default'>
-    <div class='panel-heading'>Details of Lost Item</div>
-    <div class='panel-body'>
-      <div class='row'>
-        <div class="form-group">
-          <div class='col-md-6'>
-            <label class="control-label" for="title">Title</label>
-            <div class="controls {{errorClass 'title'}}">
-              <input name="title" id="title" type="text" value="" placeholder="Provide a title" class="form-control"/>
-              <span class="help-block">{{errorMessage 'title'}}</span>
+  <div class='ui segment'>
+    <form class="ui form">
+      <h2 class="ui dividing header">Lost Item Information</h2>
+      <a class='ui red ribbon label'>Basic Details</a>
+      <div class='ui segment'>
+        <div class='two fields'>
+          <div class='field'>
+            <div class="ui labeled input {{errorClass 'title'}}">
+              <div class="ui label">Title</div>
+                <input name="title" id="title" type="text" value="" placeholder="Provide a title"/>
+              </div>
+            </div>
+          <div class='field'>
+            <div class="{{errorClass 'location'}} ui labeled input">
+              <div class="ui label">
+                Location
+              </div>
+              <input name="location" id="location" type="text" placeholder="Where did you lose it?"/>
             </div>
           </div>
         </div>
-      </div>
-    <div class='row'>
-      <div class="form-group">
-        <div class='col-md-6'>
-          <label class="control-label" for="title">Description</label>
-          <div class="controls {{errorClass 'description'}}">
-            <textarea name="description" id="description" type="text" value="" rows='4' placeholder="Describe the item you lost" class="form-control"></textarea>
-            <span class="help-block">{{errorMessage 'description'}}</span>
+        <div class='two fields'>
+          <div class='field'>
+            <div class="{{errorClass 'time'}} ui labeled input">
+              <div class="ui label">Time</div>
+                <input name='my-datepicker' type="text" id="my-datepicker" placeholder="When did you lose it?">
+              </div>
+          </div>
+          <div class='field'>
+            <div id='tags'></div>
           </div>
         </div>
       </div>
-      <div class='form-group'>
-        <div class='col-md-6'>
-          <div class='row'>
-            <div class='col-md-3'>
-              <img id='lost-item-image' src="/images/lost-static.jpg" height='125' width='125' style='border: 2px solid #333'/>
+      <a class='ui red ribbon label'>You can also provide an optional photo</a>
+      <div class='ui segment'>
+        <div class='two fields'>
+          <div class='field'>
+            <div class='ui segment' style='text-align:center'>
+              <div id='image-loader' class="ui dimmer">
+                <div class="ui text loader">Loading</div>
+              </div>
+              <img id='lost-item-image' src="/images/lost-static.jpg" height='138' width='138' style='border: 2px solid #333'/>
+              <label for="file-upload-cover" class="ui inverted icon labeled orange button">
+                <i class='cloud upload icon'></i>
+                  Upload
+                </label>
+              <input id="file-upload-cover" type="file" class="dataInput" style='display: none'/>
             </div>
-            <div class='col-md-3'>
-              <label for="file-upload-cover" class="custom-file-upload">
-                <span class='glyphicon glyphicon-cloud-upload' style='font-size: 80px'></span>
-              </label>
-              <input id="file-upload-cover" type="file" class="dataInput"/>
+          </div>
+          <div class='field'>
+            <div class="{{errorClass 'description'}} ui labeled input">
+              <textarea name="description" id="description" type="text" value="" rows='4' placeholder="Describe the item you lost" class="form-control"></textarea>
+              <div class="ui corner label">
+                <i class="asterisk icon"></i>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class='row'>
-        <div class='col-md-4'>
-        <label class="control-label" for="title">Location</label>
-          <div class="controls {{errorClass 'location'}}">
-            <input name="location" id="location" type="text" value="" placeholder="" class="form-control" />
-            <span class="help-block">{{errorMessage 'location'}}</span>
           </div>
-        </div>
-        <div class='col-md-4'>
-          <label class='control-label' for='my-datepicker'>Time</label>
-          <div class="controls {{errorClass 'time'}}">
-            <input name='my-datepicker' type="text" class="form-control" id="my-datepicker">
-            <span class="help-block">{{errorMessage 'time'}}</span>
-          </div>
-        </div>
-        <div class='col-md-4'>
-          <label class='control-label' for='tags'>Tags</label>
-          <div class="controls {{errorClass 'tags'}}">
-            <input name='tags' class='form-control' id='tags' />
-            <span class='help-block'>{{errorMessage 'tags'}}</span>
-          </div>
-        </div>
       </div>
-    </div>
-    <div style='text-align: center'>
-      <div class='panel panel-default'>
-        <div class='panel-body'>
-          <input type="submit" value="Submit" class="btn btn-primary btn-sm"/>
-        </div>
+      <div style='text-align: center'>
+        <label for='submit-post' class='ui inverted labeled icon green button'>
+          <i class='send icon'></i>
+           Submit
+        </label>
+        <input id='submit-post' type="submit" style='display: none'/>
       </div>
-    </div>
-  </div>
-  </div>
   </form>
 
 </div>

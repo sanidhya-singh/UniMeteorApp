@@ -26,7 +26,7 @@ Template.postSubmit.helpers({
     return Session.get('postSubmitErrors')[field];
   },
   errorClass: function (field) {
-    return !!Session.get('postSubmitErrors')[field] ? 'has-error' : '';
+    return !!Session.get('postSubmitErrors')[field] ? 'error' : '';
   }
 });
 
@@ -68,6 +68,7 @@ Template.postSubmit.events({
   },
   'change .dataInput': function(event, template) {
     event.preventDefault();
+    $('#image-loader').addClass('active');
       FS.Utility.eachFile(event, function(file) {
         Images.insert(file, function (err, fileObj) {
           if (err){
@@ -87,10 +88,10 @@ Template.postSubmit.events({
                showConfirmButton: false
               });
               var photoURL = "/cfs/files/images/" + fileObj._id;
-              document.getElementById('lost-item-image').src = '/images/loader.gif'
              setTimeout(function() {
                document.getElementById('lost-item-image').src = photoURL;
-             }, 4000);
+               $('#image-loader').removeClass('active');
+             }, 7000);
           }
         });
      });

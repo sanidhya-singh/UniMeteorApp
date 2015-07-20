@@ -1,11 +1,12 @@
 <template name="postsList">
   <div class="posts page">
-    <div class="wrapper">
-      {{#each posts}}
-        {{> postItem}}
-      {{/each}}
+    <div class='ui segment'>
+      <div class="ui link doubling cards">
+        {{#each posts}}
+          {{> postItem}}
+        {{/each}}
+      </div>
     </div>
-
     {{#if nextPath}}
       <a class="load-more" href="{{nextPath}}">LOAD MORE</a>
     {{else}}

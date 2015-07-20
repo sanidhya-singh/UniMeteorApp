@@ -12,6 +12,11 @@ Template.postItem.helpers({
   }
 });
 
+Template.postItem.onRendered(function() {
+  $('.link.cards .image').dimmer({
+  on: 'hover'
+});
+  });
 Template.postItem.events({
   'click .upvotable': function(e) {
     e.preventDefault();
@@ -46,5 +51,11 @@ Template.postItem.events({
 
       }
     });
+  },
+  'click .view-post': function(e) {
+    Router.go('postPage', {_id: this._id});
+  },
+  'click .edit-post': function(e) {
+    Router.go('postEdit', {_id: this._id});
   }
 });

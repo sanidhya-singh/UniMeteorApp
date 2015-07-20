@@ -23,3 +23,6 @@ pcel:loading
 multiply:iron-router-progress
 richsilv:semantic-ui-modal
 twbs:bootstrap
+semantic:ui-css
+semantic:ui-icon
+semantic:ui-card
