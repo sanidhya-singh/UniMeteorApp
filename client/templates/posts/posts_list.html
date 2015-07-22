@@ -6,6 +6,7 @@
           {{> postItem}}
         {{/each}}
       </div>
+<<<<<<< HEAD
     {{#if nextPath}}
       <center><a class='ui inverted orange button' href='{{nextPath}}'>Load More</a></center>
     {{else}}
@@ -13,6 +14,19 @@
         {{> spinKit}}
       {{/unless}}
     {{/if}}
+=======
+      <h4 class='ui horizontal divider header'>
+        <i class='circle thin icon'></i>
+      </h4>
+      {{#if nextPath}}
+        <a class="load-more" href="{{nextPath}}">LOAD MORE</a>
+      {{else}}
+        {{#unless ready}}
+          {{> spinKit}}
+        {{/unless}}
+      {{/if}}
+    </div>
+>>>>>>> origin/master
   </div>
   </div>
 </template>

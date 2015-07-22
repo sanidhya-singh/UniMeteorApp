@@ -1,7 +1,7 @@
 /* custom css */
 
 
-.grid-block, .main, .post, .comments li, .comment-form {
+.grid-block, .main, .post, .comment-form {
   background: #fff;
   border-radius: 3px;
   padding: 10px;
@@ -10,6 +10,18 @@
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
 
+.comments li {
+  padding: 12px;
+}
+
+.item-showcase {
+  height: 200px;
+  width: 100%;
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .sk-cube-grid {
   width: 40px;

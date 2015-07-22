@@ -1,5 +1,5 @@
 <template name="commentItem">
-  <li>
+  <li style='border-top: 1px solid #eee'>
     <div class="media">
       <div class="media-left">
         <a href="#">
@@ -8,7 +8,7 @@
       </div>
       <div class="media-body">
         <h4 class="media-heading">{{author}}
-          <span class='date'>on {{submittedText}}</span>
+          <span class='date'>on {{getLastSeen submittedText}}</span>
           {{#if ownComment}}
             <span class="data"><a class="edit" href="#">Edit</a></span>
             <a class="delete" href="#">Delete</a>
