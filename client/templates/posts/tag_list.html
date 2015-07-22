@@ -1,25 +1,18 @@
 <template name='tagList'>
   <div class="posts page">
-    <div class='container wrapper'>
-      <div class='panel panel-default'>
-        <div class='panel-heading'>
-          <h3 class='panel-title'>Tag: "{{getFromSession 'tag'}}"</h3>
-        </div>
-        <div class='panel-body'>
+    <div class='ui segment'>
+      <div class="ui link doubling cards">
           {{#each posts}}
             {{> postItem}}
           {{/each}}
-
+      </div>
           {{#if nextPath}}
-            <center><a class='load-more' href='{{nextPath}}'>LOAD MORE</a></center>
+            <center><a class='ui inverted orange button' href='{{nextPath}}'>Load More</a></center>
           {{else}}
             {{#unless ready}}
               {{> spinKit}}
             {{/unless}}
-              <div class="post"><p style="text-align: center; line-height: 20px">End of results.</p></div>
           {{/if}}
         </div>
       </div>
-    </div>
-  </div>
 </template>

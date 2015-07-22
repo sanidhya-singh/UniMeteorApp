@@ -6,13 +6,13 @@
           {{> postItem}}
         {{/each}}
       </div>
-    </div>
     {{#if nextPath}}
-      <a class="load-more" href="{{nextPath}}">LOAD MORE</a>
+      <center><a class='ui inverted orange button' href='{{nextPath}}'>Load More</a></center>
     {{else}}
       {{#unless ready}}
         {{> spinKit}}
       {{/unless}}
     {{/if}}
+  </div>
   </div>
 </template>
