@@ -1,11 +1,14 @@
 <template name="postsList">
   <div class="posts page">
     <div class='ui segment'>
-      <div class="ui link doubling cards">
+      <div class="ui link doubling special cards">
         {{#each posts}}
           {{> postItem}}
         {{/each}}
       </div>
+      <h4 class='ui horizontal divider header'>
+        <i class='circle thin icon'></i>
+      </h4>
         {{#if nextPath}}
           <center><a class='ui inverted orange button' href='{{nextPath}}'>Load More</a></center>
         {{else}}
@@ -13,16 +16,6 @@
             {{> spinKit}}
           {{/unless}}
         {{/if}}
-        {{#if nextPath}}
-          <a class="load-more" href="{{nextPath}}">LOAD MORE</a>
-        {{else}}
-          {{#unless ready}}
-            {{> spinKit}}
-          {{/unless}}
-        {{/if}}
-      <h4 class='ui horizontal divider header'>
-        <i class='circle thin icon'></i>
-      </h4>
     </div>
   </div>
 </template>

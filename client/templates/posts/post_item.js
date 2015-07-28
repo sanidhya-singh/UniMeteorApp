@@ -13,7 +13,7 @@ Template.postItem.helpers({
 });
 
 Template.postItem.onRendered(function() {
-  $('.link.cards .image').dimmer({
+  $('.cards .image').dimmer({
   on: 'hover'
 });
   });

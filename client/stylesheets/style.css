@@ -16,11 +16,10 @@
 
 .item-showcase {
   height: 200px;
-  width: 100%;
   color: white;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .sk-cube-grid {
