@@ -12,7 +12,6 @@ ian:accounts-ui-bootstrap-3
 audit-argument-checks
 
 houston:admin
-accounts-google
 cfs:standard-packages
 rajit:bootstrap3-datepicker
 manuelschoebel:wait-on-lib
@@ -26,3 +25,4 @@ twbs:bootstrap
 semantic:ui-css
 semantic:ui-icon
 semantic:ui-card
+email

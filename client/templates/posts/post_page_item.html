@@ -1,12 +1,18 @@
 <template name="postPageItem">
-  <div class='ui segment'>
-    <div class='ui center aligned segment access-denied page jumbotron item-showcase' style='background-image: url({{image}})'>
-        <h1>{{title}}</h1>
+  <div class='ui basic segment'>
+    <div class='ui basic center aligned segment item-showcase' style='background-image: url({{image}})'>
+          <h1 class="ui icon header" style='color: white'>
+            <i class="search icon"></i>
+            <div class="content">
+              {{title}}
+              <div class="sub header" style='color: white'>{{description}}</div>
+            </div>
+          </h1>
     </div>
     <div class='ui center aligned basic segment'>
       <div class='ui grid'>
         <div class='ui eight wide center aligned column'>
-          <div class='ui statistic'>
+          <div class='ui blue statistic'>
             <div class='value'>
               {{stringifyDate time}}
             </div>
@@ -16,7 +22,7 @@
           </div>
         </div>
         <div class='ui eight wide center aligned column'>
-          <div class='ui statistic'>
+          <div class='ui teal statistic'>
             <div class='value'>
               {{location}}
             </div>
@@ -26,7 +32,6 @@
           </div>
         </div>
       </div>
-      {{description}}
     </div>
       {{#if ownPost}}
         <div class='ui center aligned basic segment'>

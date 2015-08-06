@@ -15,7 +15,8 @@
 }
 
 .item-showcase {
-  height: 200px;
+  height: 400px;
+  line-height: 190px;
   color: white;
   background-position: center;
   background-repeat: no-repeat;
