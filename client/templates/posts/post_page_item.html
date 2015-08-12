@@ -35,13 +35,11 @@
     </div>
       {{#if ownPost}}
         <div class='ui center aligned basic segment'>
-          <a href="{{pathFor 'postEdit'}}" class='ui inverted blue labeled icon button'>
-            <i class='comments icon'></i>
-            Edit
-          </a>
-          <button class='ui inverted red labeled icon button delete'>
+          <a href="{{pathFor 'postEdit'}}" class='ui inverted blue icon button'>
             <i class='edit icon'></i>
-            Delete
+          </a>
+          <button class='ui inverted red icon button delete'>
+            <i class='trash icon'></i>
           </button>
         </div>
       {{/if}}
