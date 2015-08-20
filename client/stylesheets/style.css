@@ -1,9 +1,14 @@
 /* custom css */
 
+body{
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 60px;
+}
+
+
 .ui.grid.main{
 	margin-top: 70px;
 }
-
 
 .mobile.row{
 	padding-top: 0px !important;
@@ -32,13 +37,12 @@
 }
 
 .ui.vertical.menu{
-	margin-top: -15px !important;
+	margin-top: -10px !important;
 	width: 100%;
 	display: none;
 }
-
 .map-container {
-  width: 800px;
+  width: 100%;
   max-width: 100%;
   height: 500px;
 }
