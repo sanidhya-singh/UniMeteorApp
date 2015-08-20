@@ -17,6 +17,6 @@
 - profile with your items
 - autofill
 - JS filter (listJS)
-- generate Lost email statistics
+
 
 - jim kuros - networking a top down approach

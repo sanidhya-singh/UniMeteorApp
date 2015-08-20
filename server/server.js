@@ -1,12 +1,13 @@
 Accounts.config({
-  sendVerificationEmail: true
+  sendVerificationEmail: true,
+  forbidClientAccountCreation: false
 });
 
 Accounts.validateLoginAttempt(function(attempt){
-  /*if (attempt.user && attempt.user.emails && !attempt.user.emails[0].verified ) {
+  if (attempt.user && attempt.user.emails && !attempt.user.emails[0].verified ) {
     throw new Meteor.Error(400, 'Please verify your email');
     return false; // the login is aborted
-  }*/
+  }
   return true;
 });
 

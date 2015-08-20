@@ -13,16 +13,14 @@ Template.mapTest.helpers({
 
 walkedPath = [];
 var positionListenerOptions = {
-  enableHighAccuracy: true,
-  timeout: 1000
+  enableHighAccuracy: true
 }
 
-Template.mapTest.onCreated(function() {
+Template.body.onCreated(function() {
   // We can use the `ready` callback to interact with the map API once the map is ready.
   GoogleMaps.ready('exampleMap', function(map) {
     // Add a marker to the map once it's ready
     if (navigator.geolocation) {
-          console.log('called');
           elevator = new google.maps.ElevationService();
           navigator.geolocation.watchPosition(function (position) {
             console.log(position);
@@ -67,7 +65,7 @@ getElevation = function(currentLocation) {
   elevator.getElevationForLocations(positionalRequest, function(results, status) {
     if (status == google.maps.ElevationStatus.OK) {
       if (results[0]) {
-         document.getElementById('elevation').innerHTML = 'Floor ' + (Math.floor((results[0].elevation - 201.0)/3.35));
+         document.getElementById('elevation').innerHTML = 'Elevation ' + (results[0].elevation - 200) + 'm';
       }
     }
   });

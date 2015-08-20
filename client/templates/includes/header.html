@@ -1,13 +1,13 @@
 <template name="header">
+
   <div class="ui grid">
       <div class="computer tablet only row">
           <div class="ui inverted fixed menu navbar page grid">
-              <a href="{{pathFor 'home'}}" class="brand item {{activeRouteClass 'home'}}">ProjectName</a>
-              <a href="{{pathFor 'newPosts'}}" class="item {{activeRouteClass 'newPosts'}}">Latest</a>
-              <a href="{{pathFor 'bestPosts'}}" class="item {{activeRouteClass 'bestPosts'}}">Top</a>
-              <a href="{{pathFor 'postSubmit'}}" class="item {{activeRouteClass 'postSubmit'}}"><i class='plus icon'></i></a>
-              <div class="ui dropdown item toggle-dropdown">
-                Notifications
+              <a href="" class="brand item">Project Name</a>
+              <a href="" class="active item">Home</a>
+              <a href="" class="item">About</a>
+              <a href="" class="item">Contact</a>
+              <a class="ui dropdown item">Dropdown
                 <i class="dropdown icon"></i>
                 <div class="menu">
                   <div class="item">Action</div>
@@ -17,31 +17,27 @@
                   <div class="item">Seperated link</div>
                   <div class="item">One more seperated link</div>
                 </div>
-              </div>
+              </a>
               <div class="right menu">
-                <a href="{{pathFor 'test'}}" class='item'>Test</a>
-                  {{#if currentUser}}
-                    <a href="{{pathFor 'changePassword'}}" class='item'>{{currentUser.username}}</a>
-                  {{else}}
-                    <a href="{{pathFor 'signIn'}}" class='item'>Sign In</a>
-                  {{/if}}
+                  <a href="" class="active item">Default</a>
+                  <a href="" class="item">Static top</a>
+                  <a href="" class="item">Fixed top</a>
               </div>
-            </div>
-        </div>
+          </div>
+      </div>
       <div class="mobile only row">
           <div class="ui fixed inverted navbar menu">
-              <a href="{{pathFor 'home'}}" class="brand item mobile-view"><i class='list icon'></i> SNU</a>
-              <div class="mobile-view right menu">
+              <a href="" class="brand item">Project Name</a>
+              <div class="right menu open mobile-view">
                   <a href="" class="menu item">
-                      <i class="users icon"></i>
-                      More
+                      <i class="reorder icon"></i>
                   </a>
               </div>
           </div>
-          <div class="ui vertical navbar menu wow slideInDown">
-            <a href="{{pathFor 'newPosts'}}" class="item {{activeRouteClass 'newPosts'}}">Latest</a>
-            <a href="{{pathFor 'bestPosts'}}" class="item {{activeRouteClass 'bestPosts'}}">Top</a>
-            <a href="{{pathFor 'postSubmit'}}" class="item {{activeRouteClass 'postSubmit'}}">Add</a>
+          <div class="ui vertical navbar menu">
+              <a href="" class="active item">Home</a>
+              <a href="" class="item">About</a>
+              <a href="" class="item">Contact</a>
               <div class="ui item">
                   <div class="text">Dropdown</div>
                   <div class="menu">
@@ -54,12 +50,9 @@
                     </div>
               </div>
               <div class="menu">
-                <a href="{{pathFor 'test'}}" class='item'>Test</a>
-                  {{#if currentUser}}
-                    <a href="{{pathFor 'changePassword'}}" class='item'>{{currentUser.username}}</a>
-                  {{else}}
-                    <a href="{{pathFor 'signIn'}}" class='item'>Sign In</a>
-                  {{/if}}
+                  <a href="" class="active item">Default</a>
+                  <a href="" class="item">Static top</a>
+                  <a href="" class="item">Fixed top</a>
               </div>
           </div>
       </div>

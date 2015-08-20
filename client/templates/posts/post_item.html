@@ -1,5 +1,5 @@
 <template name="postItem">
-  <div class="card wow fadeInUp">
+  <div class="card">
     <div class="blurring dimmable image">
       <div class="ui dimmer">
         <div class="content">
@@ -18,7 +18,7 @@
       <a class="header" href="{{pathFor 'postPage'}}">{{title}}</a>
       <div class="meta">
         <span class="date">{{description}}</span>
-        <div class='ui basic segment'>
+        <div class='ui segment'>
           <p>
             <a href="#" class='ui red circular label tiny'>{{location}} on {{time}}</a>
           </p>
@@ -35,12 +35,10 @@
         {{votes}} <i class='thumbs outline up icon'></i>
         {{commentsCount}} <i class='comments icon'></i>
       </span>
-      <span class='left floated'>
-        <a>
-          <i class="user icon"></i>
-          {{author}}
-        </a>
-      </span>
+      <a>
+        <i class="user icon"></i>
+        {{author}}
+      </a>
     </div>
   </div>
 </template>

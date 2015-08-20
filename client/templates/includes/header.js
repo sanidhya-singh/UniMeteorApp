@@ -11,21 +11,13 @@ Template.header.helpers({
   }
 });
 
-Template.header.onCreated(function() {
-     $('.ui.dropdown').dropdown();
-});
-
-Template.header.onRendered(function() {
-  new WOW().init();
+Template.header.onCreated(function() {  
+	$('.ui.dropdown').dropdown();
 });
 
 Template.header.events({
-  'click .mobile-view': function(e) {
+  'click mobile-view': function(e) {
     e.preventDefault();
     $('.ui.vertical.menu').toggle();
-  },
-  'click .toggle-dropdown': function(e) {
-    e.preventDefault();
-    $('.ui.dropdown').dropdown();
   }
 });
