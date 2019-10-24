@@ -17,6 +17,8 @@
 - profile with your items
 - autofill
 - JS filter (listJS)
-
+- HackTober
 
 - jim kuros - networking a top down approach
+
+
