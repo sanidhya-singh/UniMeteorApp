@@ -10,5 +10,5 @@ Run the following commands in the Terminal below:
 4. `mrt update`
 5. `meteor`
 
-Go to the "Preview Menu" and click "Port 3000"
+Go to the "Preview Menu", click "Port 3000" and specify the address "IP" or "localhost"
 
